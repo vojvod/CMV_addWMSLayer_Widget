@@ -1,5 +1,7 @@
 # cmv_addwmslayer_widget
-A CMV widget for adding a wms layer
+A CMV widget for adding wms layers from combo box or from text box
+
+![alt tag](https://github.com/vojvod/CMV_addWMSLayer_Widget/blob/master/cmv_addwmslayer_widget.png)
 
 ## Adding to CMV
 ```javascript
