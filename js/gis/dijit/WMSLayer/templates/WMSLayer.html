@@ -1,0 +1,21 @@
+<div class="WMSLagerWidget">
+
+	<div  class="WMSLagerWidget1">
+		<label><b>${i18n.labels.layer}</b></label><br/>
+		<select style="width: 100%" data-dojo-type="dijit/form/Select" data-dojo-attach-point="wmsSelect"></select>
+	</div>
+	
+	<div id="wmsLayerLegend" data-dojo-attach-point="wmsLayerLegend" class="wmsLayerLegend"></div>
+	
+	<div class="WMSLagerWidget1" align="center">
+		<button data-dojo-attach-point="addButton" 
+				data-dojo-props="iconClass:'addWMSLayerIcon',showLabel:true"
+				data-dojo-type="dijit/form/Button">${i18n.labels.add}</button>
+	
+		<button data-dojo-type="dijit/form/Button" 
+				data-dojo-props="iconClass:'clearWMSLayerIcon',showLabel:true"
+				data-dojo-attach-event="onClick:clearWMSLayers">${i18n.labels.remove}</button>
+	</div>
+	
+  </div>
+
