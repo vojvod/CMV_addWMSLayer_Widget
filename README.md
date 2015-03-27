@@ -1,5 +1,5 @@
 # AddWMSLayer Widget
-A widget for CMV (http://cmv.io/), the Configurable Map Viewer. It adds wms layers from combobox or from textbox.
+A widget for CMV (http://cmv.io/). It adds wms layers from combobox or from textbox.
 
 ![alt tag](https://github.com/vojvod/CMV_addWMSLayer_Widget/blob/master/cmv_addwmslayer_widget.png)
 
