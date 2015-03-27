@@ -3,7 +3,7 @@ A widget for CMV (http://cmv.io/). It adds wms layers from combobox or from text
 
 ![alt tag](https://github.com/vojvod/CMV_addWMSLayer_Widget/blob/master/cmv_addwmslayer_widget.png)
 
-### Widget Configuration
+## Widget Configuration
 Add the widget configuration object to the widgets object in viewer.js.
 ```javascript
 widgets: {
