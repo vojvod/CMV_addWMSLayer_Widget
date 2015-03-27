@@ -1,4 +1,4 @@
-define ({
+define({
     root: {
         labels: {
             layer: 'Select Layer:',

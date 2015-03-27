@@ -1,12 +1,14 @@
-.WMSLagerWidget .WMSLagerWidget1{
-	margin: 5px;
-	padding: 5px;
+.WMSLagerWidget .WMSLagerWidget1 {
+    margin: 5px;
+    padding: 5px;
 }
+
 .clearWMSLayerIcon {
     background-image: url(../images/clear.png);
     width: 16px;
     height: 16px;
 }
+
 .addWMSLayerIcon {
     background-image: url(../images/add.png);
     width: 16px;
@@ -15,7 +17,7 @@
 
 .WMSLagerWidget .wmsLayerLegend {
     width: 100%;
-	margin-left: 10px;
+    margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
 }

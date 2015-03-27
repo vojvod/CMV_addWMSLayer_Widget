@@ -1,28 +1,30 @@
 <div class="WMSLagerWidget">
 
     <div class="WMSLagerWidget1">
-		<input style="width: 100%" type="text" data-dojo-type="dijit.form.TextBox" 
-						   data-dojo-attach-point="wmsLayerTextBox" 
-						   data-dojo-props="trim:true,required:true,value:'',placeholder:'π.χ. http://domain/geoserver/wms',class:'searchText'" />
-	</div>
-	
-	<div class="WMSLagerWidget1">	
-		<input style="width: 100%" class="WMSLagerWidget1" type="text" data-dojo-type="dijit.form.TextBox" 
-						   data-dojo-attach-point="numberOfLayerTextBox" 
-						   data-dojo-props="trim:true,required:true,value:'',placeholder:'π.χ. LayerID1,LayerID2',class:'searchText'" />
-	</div>
-	
-	<div id="wmsLayerLegend2" data-dojo-attach-point="wmsLayerLegend2" class="wmsLayerLegend"></div>
-	
-	<div class="WMSLagerWidget1" align="center">
-		<button data-dojo-attach-point="addButton" 
-				data-dojo-props="iconClass:'addWMSLayerIcon',showLabel:true"
-				data-dojo-type="dijit/form/Button">${i18n.labels.add}</button>
-	
-		<button data-dojo-type="dijit/form/Button" 
-				data-dojo-props="iconClass:'clearWMSLayerIcon',showLabel:true"
-				data-dojo-attach-event="onClick:clearWMSLayers">${i18n.labels.remove}</button>
-	</div>
-	
-  </div>
+        <input style="width: 100%" type="text" data-dojo-type="dijit.form.TextBox"
+               data-dojo-attach-point="wmsLayerTextBox"
+               data-dojo-props="trim:true,required:true,value:'',placeholder:'π.χ. http://domain/geoserver/wms',class:'searchText'"/>
+    </div>
+
+    <div class="WMSLagerWidget1">
+        <input style="width: 100%" class="WMSLagerWidget1" type="text" data-dojo-type="dijit.form.TextBox"
+               data-dojo-attach-point="numberOfLayerTextBox"
+               data-dojo-props="trim:true,required:true,value:'',placeholder:'π.χ. LayerID1,LayerID2',class:'searchText'"/>
+    </div>
+
+    <div id="wmsLayerLegend2" data-dojo-attach-point="wmsLayerLegend2" class="wmsLayerLegend"></div>
+
+    <div class="WMSLagerWidget1" align="center">
+        <button data-dojo-attach-point="addButton"
+                data-dojo-props="iconClass:'addWMSLayerIcon',showLabel:true"
+                data-dojo-type="dijit/form/Button">${i18n.labels.add}
+        </button>
+
+        <button data-dojo-type="dijit/form/Button"
+                data-dojo-props="iconClass:'clearWMSLayerIcon',showLabel:true"
+                data-dojo-attach-event="onClick:clearWMSLayers">${i18n.labels.remove}
+        </button>
+    </div>
+
+</div>
 
