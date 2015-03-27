@@ -1,9 +1,10 @@
-# cmv_addwmslayer_widget
-A CMV widget for adding wms layers from combo box or from text box
+# AddWMSLayer Widget
+A widget for CMV (http://cmv.io/), the Configurable Map Viewer. It adds wms layers from combobox or from textbox.
 
 ![alt tag](https://github.com/vojvod/CMV_addWMSLayer_Widget/blob/master/cmv_addwmslayer_widget.png)
 
-## Adding to CMV
+# Widget Configuration
+Add the widget configuration object to the widgets object in viewer.js.
 ```javascript
 widgets: {
     ...
@@ -36,3 +37,6 @@ widgets: {
     ...
 }
 ```
+Copy WMSLayer, WMSLayer2, WMSLayer.js and WMSLayer2.js to folder gis/dijit/ at your CMV installation.
+
+Configure your proxy.
