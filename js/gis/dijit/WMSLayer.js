@@ -43,7 +43,6 @@ define([
         loadWMSLayer: function () {
 
             var wmsLayerSelection = this.wmsSelect;
-            var options = [];
             array.forEach(this.wmslayers, function (item) {
                 option = {
                     value: item.url + '||' + item.layers_id,
@@ -59,7 +58,6 @@ define([
         handleCoordInput: function (evt) {
             if (evt.charOrCode === keys.ENTER) {
                 this.addWMSLayer();
-                return;
             }
         },
         addWMSLayer: function () {
@@ -67,7 +65,7 @@ define([
             esriConfig.defaults.io.proxyUrl = this.proxy_url;
 
             var str_value = this.wmsSelect.get('value');
-            var str_value_res = str_value.split("||");
+            var str_value_res = str_value.split('||');
 
 
             var wmsLayerUrl = str_value_res[0];
@@ -75,19 +73,16 @@ define([
 
 
             var wmsLayer = new WMSLayer(wmsLayerUrl, {
-                id: "WMSLayer," + numberOfLayer,
-                format: "png",
+                id: 'WMSLayer,' + numberOfLayer,
+                format: 'png',
                 visibleLayers: [numberOfLayer],
                 opacity: 0.7
             });
 
             this.map.addLayer(wmsLayer, 1);
 
-            //domConstruct.empty(this.wmsLayerLegend);
-            //domConstruct.create("div", { innerHTML: "<h5>Υπόμνημα</h5><label>" }, this.wmsLayerLegend);
             var legend_url = wmsLayerUrl + '?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=' + numberOfLayer;
-            var legend_img = dojox.image.preload([legend_url]);
-            domConstruct.create("div", {innerHTML: "<label>" + numberOfLayer + "</label></br><img src=" + legend_url + ">"}, this.wmsLayerLegend);
+            domConstruct.create('div', {innerHTML: '<label>' + numberOfLayer + '</label></br><img src=' + legend_url + '>'}, this.wmsLayerLegend);
 
         },
 
@@ -99,8 +94,7 @@ define([
                 layersIds.push(layerId);
             });
             array.forEach(layersIds, function (layerId) {
-                var layerIDall = layerId;
-                var layerIDpart = layerIDall.split(',');
+                var layerIDpart = layerId.split(',');
                 if (layerIDpart[0] == 'WMSLayer') {
                     var layer = map.getLayer(layerId);
                     map.removeLayer(layer);

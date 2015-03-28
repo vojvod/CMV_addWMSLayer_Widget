@@ -47,7 +47,6 @@ define([
         handleCoordInput: function (evt) {
             if (evt.charOrCode === keys.ENTER) {
                 this.addWMSLayer();
-                return;
             }
         },
         addWMSLayer: function () {
@@ -60,25 +59,21 @@ define([
             var numberOfLayer = this.numberOfLayerTextBox.get('value');
 
             var wmsLayer = new WMSLayer(wmsLayerUrl, {
-                id: "WMSLayer||" + numberOfLayer,
-                format: "png",
+                id: 'WMSLayer||' + numberOfLayer,
+                format: 'png',
                 visibleLayers: [numberOfLayer],
                 opacity: 0.7
             });
 
             this.map.addLayer(wmsLayer);
 
-            var numberOfLayerPart = [];
             var numberOfLayerPart = numberOfLayer.split(',');
 
             domConstruct.empty(this.wmsLayerLegend2);
 
-            //domConstruct.create("div", { innerHTML: "<h5>Υπόμνημα</h5><label>" }, this.wmsLayerLegend2);
-
             array.forEach(numberOfLayerPart, function (layer) {
                 var legend_url = wmsLayerUrl + '?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=' + layer;
-                var legend_img = dojox.image.preload([legend_url]);
-                domConstruct.create("div", {innerHTML: "<label>" + layer + "</label></br><img src=" + legend_url + ">"}, this.wmsLayerLegend2);
+                domConstruct.create('div', {innerHTML: '<label>' + layer + '</label></br><img src=' + legend_url + '>'}, this.wmsLayerLegend2);
             });
 
 
@@ -92,7 +87,6 @@ define([
                 layersIds.push(layerId);
             });
             array.forEach(layersIds, function (layerId) {
-                var layerIDpart = [];
                 var layerIDpart = layerId.split('||');
                 if (layerIDpart[0] == 'WMSLayer') {
                     var layer = map.getLayer(layerId);
